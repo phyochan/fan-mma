@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{asset('form/bootstrap/css/bootstrap.min.css')}}">
 
     <link rel="stylesheet" href="{{asset('form/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link href="{{asset('css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
 
 

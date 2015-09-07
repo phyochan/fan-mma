@@ -4,6 +4,16 @@
 @section('form')
 
 
+    <script type="text/javascript">
+        $(document).ready(function (){
+            $("#loading-div-background").css({ opacity: 1.0 });
+        });
+
+        function ShowProgressAnimation(){
+            $("#loading-div-background").show();
+        }
+    </script>
+
     <div class="register-container container">
 
 
@@ -52,11 +62,17 @@
                     <input type="text" id="email" name="email" placeholder="Enter your email..." value="{{old('email')}}">
 
 
-                    <button type="submit">Submit</button>
+                    <button onclick="ShowProgressAnimation();" type="submit">Submit</button>
 
 
                 </form>
             </div>
+        </div>
+    </div>
+
+    <div id="loading-div-background">
+        <div id="loading-div" class="ui-corner-all">
+            <img style="height:32px;width:32px;margin:30px;" src="{{asset('form/img/please_wait.gif')}}" alt="Loading.."/><br>PROCESSING. PLEASE WAIT...
         </div>
     </div>
 
