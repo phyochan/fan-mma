@@ -37,7 +37,7 @@ class AdminSeeder extends Seeder{
             'name' => 'phyochan',
             'nickname' => 'Phyo Chan',
             'email' => 'phyochandeveloper@gmail.com',
-            'password' => Hash::make('12345'),
+            'password' => Hash::make('phyo12345'),
 
         ]);
 
@@ -46,7 +46,26 @@ class AdminSeeder extends Seeder{
             'name' => 'nyipaing',
             'nickname' => 'Nyi Paing',
             'email' => 'nyipaing2015@gmail.com',
-            'password' => Hash::make('12345'),
+            'password' => Hash::make('nyipaing12345'),
+
+        ]);
+
+
+        User::create([
+
+            'name' => 'naymyint',
+            'nickname' => 'Nay Myint',
+            'email' => 'emovious.kg.92@gmail.com',
+            'password' => Hash::make('naymyint12345'),
+
+        ]);
+
+        User::create([
+
+            'name' => 'thantzinphyo',
+            'nickname' => 'Thant Zin Phyo',
+            'email' => 'thantzinphyo11@gmail.com',
+            'password' => Hash::make('thantzinphyo12345'),
 
         ]);
 
