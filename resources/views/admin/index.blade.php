@@ -51,7 +51,7 @@
         </div>
 
         <!--logo start-->
-        <a href="index.html" class="logo">Myanmar Music Art Admin Panel</a>
+        <a href="{{URL::to('/backend/admin/')}}" class="logo">Myanmar Music Art Admin Panel</a>
         <!--logo end-->
 
 
