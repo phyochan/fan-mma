@@ -20,8 +20,7 @@ class DatabaseSeeder extends Seeder
         // $this->call(UserTableSeeder::class);
 
         $this->call('AdminSeeder');
-       $this->call('RequestSeeder');
-    $this->call('UgSeeder');
+
         Model::reguard();
     }
 }
@@ -50,6 +49,8 @@ class AdminSeeder extends Seeder{
             'password' => Hash::make('12345'),
 
         ]);
+
+
 
     }
 }
