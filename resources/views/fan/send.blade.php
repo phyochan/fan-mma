@@ -89,7 +89,7 @@
                     <input type="text" required id="email" name="email" placeholder="Enter your email..." value="{{old('email')}}">
 
 
-                    <button type="submit">Send</button>
+                    <button onclick="ShowProgressAnimation();" type="submit">Send</button>
 
 
 
