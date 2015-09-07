@@ -3,6 +3,16 @@
 @section('form')
 
 
+    <script type="text/javascript">
+        $(document).ready(function (){
+            $("#loading-div-background").css({ opacity: 1.0 });
+        });
+
+        function ShowProgressAnimation(){
+            $("#loading-div-background").show();
+        }
+    </script>
+
     <script src="{{asset('js/my.js')}}"></script>
 
     <div class="register-container container">
@@ -89,6 +99,12 @@
         </div>
     </div>
 
+    <div id="loading-div-background">
+        <div id="loading-div" class="ui-corner-all">
+            <img style="height:32px;width:32px;margin:30px;" src="{{asset('form/img/please_wait.gif')}}" alt="Loading.."/><br>PROCESSING. PLEASE WAIT...
+        </div>
+    </div>
+
     <script src="{{asset('js/jquery.min.js')}}"></script>
 
 
@@ -98,6 +114,7 @@
     <script>
         $('#flash-overlay-modal').modal();
     </script>
+
 
 
 @endsection
