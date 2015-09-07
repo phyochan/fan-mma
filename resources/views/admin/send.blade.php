@@ -60,13 +60,13 @@
                         <td>{{$send -> singer}}</td>
                         <td>
 
-                            <a href="" class="btn btn-info">View</a>
+                            <a href="{{$send -> image}}" target="_blank" class="btn btn-info">View</a>
 
                         </td>
 
                         <td>
 
-                            <a href="{{$send -> mp3}}" download="" class="btn btn-primary">Download</a>
+                            <a href="{{$send -> mp3}}" target="_blank" download="" class="btn btn-primary">Download</a>
 
                         </td>
 
