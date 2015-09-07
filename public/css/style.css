@@ -1,0 +1,86 @@
+.myfontsize{
+
+    font-size: 20px;
+
+}
+
+.Absolute-Center {
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.Absolute-Center.is-Responsive {
+    width: 50%;
+    height: 50%;
+    min-width: 200px;
+    max-width: 600px;
+    padding: 40px;
+}
+
+
+.login-error-bottom{
+
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+
+.login-error-button{
+
+
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.admin-left{
+
+    margin-left: 160px;
+}
+
+.single-table-left{
+
+    margin-left: 100px;
+}
+
+
+.single-create-left{
+
+    margin-left: 30px;
+
+}
+
+.single-create-top{
+
+    margin-top: 30px;
+}
+
+.single-create-fontsize{
+
+    font-size: 15px;
+}
+
+.single-checkbox-top{
+
+
+    margin-top: 10px;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.my {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
