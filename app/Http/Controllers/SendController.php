@@ -93,6 +93,10 @@ class SendController extends Controller{
 
                     $send -> image = asset('upload/send/image/'.$imgFileName);
 
+                    $send -> mp3filename = $mp3name;
+
+                    $send -> imagefilename = $imgFileName;
+
 
                     $send -> save();
 

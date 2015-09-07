@@ -30,8 +30,10 @@
 
             <div class="row">
             <div class="iphone span5">
-                <img src="{{asset('form/img/music.png')}}" alt="">
+                <script type='text/javascript' src='//eclkmpbn.com/adServe/banners?tid=58714_92890_0'></script>
             </div>
+
+                <script type='text/javascript' src='//eclkmpbn.com/adServe/banners?tid=58714_92890_1&type=shadowbox&size=300x250'></script>
 
 
             <div class="register span6">

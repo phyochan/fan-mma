@@ -21,6 +21,8 @@ class CreateSendsTable extends Migration
             $table -> text('mp3');
             $table -> text('image');
             $table -> string('approve');
+            $table -> string('mp3filename');
+            $table -> string ('imagefilename');
             $table->timestamps();
         });
     }

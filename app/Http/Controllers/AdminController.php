@@ -94,7 +94,9 @@ class AdminController extends Controller
 
         $send = Sends::find($id);
 
+        \File::delete(public_path()."/upload/send/image/".$send -> imagefilename);
 
+        \File::delete(public_path()."/upload/send/mp3/".$send -> mp3filename);
 
         $send -> delete();
 
