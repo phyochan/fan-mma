@@ -25,7 +25,7 @@
                 <p class="errors">{!! Session::get('error') !!}</p>
             @endif
 
-
+            @include('flash::message')
 
 
             <div class="row">

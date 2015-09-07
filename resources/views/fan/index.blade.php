@@ -38,7 +38,7 @@
             </div>
             <div class="links span8">
                 <a class="home" href="{{URL::to('/ug/send')}}" rel="tooltip" data-placement="bottom" data-original-title="Home"></a>
-                <a class="blog" href="" rel="tooltip" data-placement="bottom" data-original-title="Blog"></a>
+                <a class="blog" href="{{URL::to('/request')}}" rel="tooltip" data-placement="bottom" data-original-title="Blog"></a>
             </div>
         </div>
     </div>
