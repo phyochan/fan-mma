@@ -28,9 +28,7 @@
             </div>
         @endif
 
-            @if (Session::has('sucess'))
-                <div class="alert alert-info">{{ Session::get('sucess') }}</div>
-            @endif
+            @include('flash::message')
 
         <div class="row">
             <div class="iphone span5">
@@ -69,6 +67,16 @@
             </div>
         </div>
     </div>
+
+    <script src="{{asset('js/jquery.min.js')}}"></script>
+
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{asset('js/bootstrap.min.js')}}"></script>
+
+    <script>
+        $('#flash-overlay-modal').modal();
+    </script>
 
     <div id="loading-div-background">
         <div id="loading-div" class="ui-corner-all">

@@ -59,7 +59,9 @@ class RequestController extends Controller{
 
             $request -> save();
 
-            \Session::flash('sucess', 'Your Request Has Been Complete.');
+
+
+            \Flash::overlay('Your Request Has Been Complete.',"Thank you for your request");
 
 
             return \Redirect::to('/request');
