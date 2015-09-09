@@ -60,6 +60,12 @@
 
                         </form>
 
+                        <br>
+
+
+                            <p class="text-danger text-center lead">Music Link မွာ</p>
+
+                        <p class="text-danger text-center lead">Myanmar Music Art Main Site တြင္တင္ထားေသာ Link ထည့္ေပးပါရန္</p>
 
 
 
