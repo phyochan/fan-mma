@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 
 use App\Request;
 
+use App\Sends;
 use Illuminate\Support\Facades\Validator;
 
 
@@ -29,11 +30,27 @@ class EmailController extends Controller{
 
     }
 
+public function sendIndex($id){
 
-    public function send($id){
+
+    $send = Sends::findOrNew($id);
 
 
-            $request = Request::findOrNew($id);
+
+
+    return view('email.sendIndex') ->with('send',$send);
+
+
+}
+
+
+
+
+    public function send($id)
+    {
+
+
+        $request = Request::findOrNew($id);
 
 
         $rules = array(
@@ -54,14 +71,11 @@ class EmailController extends Controller{
         } else {
 
 
-
             var_dump(\Input::get('email'));
 
             $music = \Input::get('music');
 
-            $name = $request -> name;
-
-
+            $name = $request->name;
 
 
             $data = array(
@@ -71,21 +85,50 @@ class EmailController extends Controller{
                 'name' => $name
             );
 
-            \Mail::send('email.request', $data, function($message) {
+            \Mail::send('email.request', $data, function ($message) {
                 $message->to(\Input::get('email'), "Myanmar Music Art Request User")->subject("Myanmar Music Art တြင္သီခ်င္းေတာင္းဆုိထားျခင္း");
             });
 
 
-            \Flash::overlay('Mail Send Finish!',"Complete.");
+            \Flash::overlay('Mail Send Finish!', "Complete.");
 
             return \Redirect::to('/backend/admin/request');
 
 
         }
 
+    }
 
 
 
+        public function Ugsend($id){
+
+
+            $send = Sends::findOrNew($id);
+
+
+                $music = \Input::get('music');
+
+                $name = $send -> name;
+
+
+
+
+                $data = array(
+
+                    'send' => $send,
+                    'music' => $music,
+                    'name' => $name
+                );
+
+                \Mail::send('email.send', $data, function($message) {
+                    $message->to(\Input::get('email'), "Myanmar Music Art UG Songs")->subject("Myanmar Music Art တြင္သီခ်င္းေတာင္းဆုိထားျခင္း");
+                });
+
+
+                \Flash::overlay('Mail Send Finish!',"Complete.");
+
+                return \Redirect::to('/backend/admin/ugsongs/request');
 
 
 

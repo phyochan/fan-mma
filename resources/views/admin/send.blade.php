@@ -37,6 +37,7 @@
 
                     <th></th>
                     <th></th>
+                    <th></th>
 
 
                 </tr>
@@ -91,11 +92,21 @@
 
                         </td>
 
+                         <td>  <a class="btn btn-info disabled" href="">UnAvailable</a></td>
+
                         @else
 
                             <td>
 
                                 <button class="btn btn-primary disabled" type="button">Approved</button>
+
+                            </td>
+
+                            <td>
+
+                                <a href="{{url('/backend/admin/ug/email',$send-> id)}}" class="btn btn-info">Send Email</a>
+
+
 
                             </td>
 
@@ -142,5 +153,15 @@
 
         </section>
     </section>
+
+    <script src="{{asset('js/jquery.min.js')}}"></script>
+
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{asset('js/bootstrap.min.js')}}"></script>
+
+    <script>
+        $('#flash-overlay-modal').modal();
+    </script>
 
 @endsection

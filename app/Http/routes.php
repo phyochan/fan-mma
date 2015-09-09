@@ -88,6 +88,9 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/backend/admin/email/{id}','EmailController@index');
     Route::post('/backend/admin/email/{id}','EmailController@send');
 
+    Route::get('/backend/admin/ug/email/{id}','EmailController@sendIndex');
+    Route::post('/backend/admin/ug/email/{id}','EmailController@Ugsend');
+
 
 
 
