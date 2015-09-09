@@ -85,10 +85,28 @@ Route::group(['middleware' => 'auth'], function() {
     Route::delete('/backend/admin/ugsongs/request/delete/{id}','AdminController@sendDelete');
 
 
+    Route::get('/backend/admin/email/{id}','EmailController@index');
+    Route::post('/backend/admin/email/{id}','EmailController@send');
+
+
+
+
+
+
     Route::get('/backend/',function(){
 
 
         return Redirect::to('/backend/admin');
     });
+
+});
+
+
+
+
+Route::get('/sendemail2', function () {
+
+
+
 
 });

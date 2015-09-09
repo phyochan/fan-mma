@@ -35,6 +35,7 @@
 
                     <th></th>
                     <th></th>
+                    <th></th>
 
 
                 </tr>
@@ -74,6 +75,9 @@
 
                             </td>
 
+
+                            <td>  <a class="btn btn-info disabled" href="">UnAvailable</a></td>
+
                         @else
 
                           <td>
@@ -81,6 +85,15 @@
                               <button class="btn btn-primary disabled" type="button">Approved</button>
 
                           </td>
+
+
+                            <td>
+
+                                <a href="{{url('/backend/admin/email',$request -> id)}}" class="btn btn-info">Send Email</a>
+
+
+
+                            </td>
 
 
                         @endif
