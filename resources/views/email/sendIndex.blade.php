@@ -39,14 +39,14 @@
                             <div class="form-group">
 
                                 <label for="comment">Email Address</label>
-                                <input type="text" class="form-control"  name="email" value="{{$send -> email}}">
+                                <input type="text" class="form-control"  required name="email" value="{{$send -> email}}">
 
                             </div>
 
                             <div class="form-group">
 
                                 <label for="comment">Music Link</label>
-                                <input type="text" class="form-control"  name="music">
+                                <input type="text" class="form-control"  required name="music">
 
                             </div>
 
