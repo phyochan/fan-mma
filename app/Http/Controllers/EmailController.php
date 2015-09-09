@@ -59,13 +59,16 @@ class EmailController extends Controller{
 
             $music = \Input::get('music');
 
+            $name = $request -> name;
+
 
 
 
             $data = array(
 
                 'request' => $request,
-                'music' => $music
+                'music' => $music,
+                'name' => $name
             );
 
             \Mail::send('email.request', $data, function($message) {
