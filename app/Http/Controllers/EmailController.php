@@ -60,6 +60,8 @@ class EmailController extends Controller{
             $music = \Input::get('music');
 
 
+
+
             $data = array(
 
                 'request' => $request,
@@ -67,7 +69,7 @@ class EmailController extends Controller{
             );
 
             \Mail::send('email.request', $data, function($message) {
-                $message->to(\Input::get('email'), 'Codelution Staff')->subject("Myanmar Music Art တြင္သီခ်င္းေတာင္းဆုိထားျခင္း");
+                $message->to(\Input::get('email'), "Myanmar Music Art Request User")->subject("Myanmar Music Art တြင္သီခ်င္းေတာင္းဆုိထားျခင္း");
             });
 
 
