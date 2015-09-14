@@ -42,6 +42,21 @@ Route::get('/error/loginfail',function(){
 
 
 
+Route::group(['middleware' => 'apiauth'], function() {
+
+    Route::get('/backend/admin/mobile/songs/api/all',function(){
+
+        $singlemusic = \App\SingleMusic::orderBy('id', 'desc')->get();
+
+
+        return \Response::json($singlemusic);
+
+
+    });
+
+
+});
+
 Route::group(['middleware' => 'auth'], function() {
 
     Route::get('/backend/admin/mobile/songs/all',function(){
