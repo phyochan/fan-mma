@@ -17,7 +17,7 @@ class ApiMiddleware {
 
 	public function handle($request, Closure $next)
 	{
-        if(!$request->header("APIKEY") == "7g5AGW47e0v1UL4U7uq53SCXi6oOGgQp") {
+        if(($request->header("APIKEY") != "7g5AGW47e0v1UL4U7uq53SCXi6oOGgQp")) {
             return "Unauthorized Access!";
         }
 		return $next($request);

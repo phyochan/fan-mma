@@ -59,6 +59,13 @@ Route::group(['middleware' => 'apiauth'], function() {
 
 
 
+
+
+
+
+Route::group(['middleware' => 'auth'], function() {
+
+
     Route::get('/backend/admin/mobile/songs/all',function(){
 
         $singlemusic = \App\SingleMusic::orderBy('id', 'desc')->get();
@@ -69,11 +76,6 @@ Route::group(['middleware' => 'apiauth'], function() {
 
     });
 
-
-
-
-
-Route::group(['middleware' => 'auth'], function() {
 
 
     Route::get('/logout','LoginController@dologout');
