@@ -85,6 +85,13 @@
                     </a>
                 </li>
 
+                <li class="active">
+                    <a class="" href="{{URL::to('/backend/admin/mobile/songs/')}}">
+                        <i class="icon_mobile"></i>
+                        <span>Mobile Api</span>
+                    </a>
+                </li>
+
 
 
 

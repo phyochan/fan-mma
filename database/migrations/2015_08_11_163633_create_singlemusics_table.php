@@ -14,12 +14,11 @@ class CreateSinglemusicsTable extends Migration
     {
         Schema::create('singlemusics', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
+            $table->string('songtitle');
             $table->string('image');
             $table->string('imageName');
             $table->string('mp3');
-            $table->string('mtv');
-            $table->string('singer')->unique();
+            $table->string('singer');
             $table->string('language');
             $table->string('categories');
             $table->text('content');

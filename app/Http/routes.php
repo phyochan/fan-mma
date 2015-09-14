@@ -44,7 +44,7 @@ Route::get('/error/loginfail',function(){
 
 Route::group(['middleware' => 'auth'], function() {
 
-    Route::get('/music/all',function(){
+    Route::get('/backend/admin/mobile/songs/all',function(){
 
         $singlemusic = \App\SingleMusic::orderBy('id', 'desc')->get();
 
@@ -64,6 +64,15 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/logout','LoginController@dologout');
     Route::resource('/music','SingleController');
     Route::resource('/album','AlbumController');
+
+    Route::resource('/backend/admin/mobile/songs/','MobileSingleController');
+
+    Route::get('/backend/admin/mobile/songs/{id}','MobileSingleController@show');
+    Route::post('/backend/admin/mobile/songs/{id}','MobileSingleController@update');
+
+    Route::get('/backend/admin/mobile/songs/{id}/edit','MobileSingleController@edit');
+    Route::delete('/backend/admin/mobile/songs/delete/{id}','MobileSingleController@destroy');
+
 
 
 

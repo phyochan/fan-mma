@@ -5,6 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 use   \App\User;
 use \App\Request;
 use \App\Sends;
+use \App\SingleMusic;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,6 +21,7 @@ class DatabaseSeeder extends Seeder
         // $this->call(UserTableSeeder::class);
 
         $this->call('AdminSeeder');
+        
 
         Model::reguard();
     }
@@ -127,3 +129,34 @@ class UgSeeder extends Seeder{
 
     }
 }
+
+class ApiSeeder extends Seeder{
+
+    public function run(){
+
+
+        $faker = Faker\Factory::create();
+
+
+        for($i = 0; $i < 20; $i++){
+
+            SingleMusic::create([
+
+                'songtitle' => $faker -> text,
+
+                'singer' => $faker -> name,
+                'mp3' => "http://localhost:8000/upload/send/mp3/8 Days, 8 months, 8 hours.mp3",
+                'categories' => 'pop',
+                'language' => 'korea',
+                'author' => 'phyochan',
+
+
+            ]);
+
+        }
+
+
+    }
+}
+
+
