@@ -57,7 +57,7 @@ Route::group(['middleware' => 'apiauth'], function() {
 
 });
 
-Route::group(['middleware' => 'auth'], function() {
+
 
     Route::get('/backend/admin/mobile/songs/all',function(){
 
@@ -70,7 +70,7 @@ Route::group(['middleware' => 'auth'], function() {
     });
 
 
-});
+
 
 
 Route::group(['middleware' => 'auth'], function() {
