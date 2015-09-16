@@ -8,31 +8,24 @@ use Closure;
 class VerifyCsrfToken extends BaseVerifier
 {
 
-    private $openRoutes = ['api/getcount/{id}'];
+
     /**
      * The URIs that should be excluded from CSRF verification.
      *
      * @var array
      */
-    protected $except = [
-        //
-    ];
-
+    public function handle($request, Closure $next)
+    {
+        if(strpos($request->getRequestUri(), 'api') >= 0)
+        {
+            return $next($request);
+        }
+        return parent::handle($request, $next);
+    }
 
 
 //modify this function
-    public function handle($request, Closure $next)
-    {
-        //add this condition
-        foreach($this->openRoutes as $route) {
 
-            if ($request->is($route)) {
-                return $next($request);
-            }
-        }
-
-        return parent::handle($request, $next);
-    }
 
 
 
