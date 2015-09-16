@@ -46,7 +46,7 @@ class MobileSingleController extends Controller
     {
         //
         $this->validate($request, [
-           'songname' => 'required|max:1000',
+            'songname' => 'required|max:1000',
             'singer' => 'required|max:255',
             'mp3' => 'required',
             'content' => 'required'
@@ -222,5 +222,23 @@ class MobileSingleController extends Controller
 
 
         return \Redirect::to('/backend/admin/mobile/songs');
+    }
+
+    public function GetCount($id){
+
+        $singlemusic = SingleMusic::findOrNew($id);
+
+        if($_POST('download' == 'count')){
+
+            $singlemusic -> count = $singlemusic -> count +1 ;
+
+            $singlemusic -> save();
+        }
+
+
+
+        return null;
+
+
     }
 }
