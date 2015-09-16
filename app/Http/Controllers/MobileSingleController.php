@@ -229,17 +229,25 @@ class MobileSingleController extends Controller
 
         $singlemusic = SingleMusic::findOrNew($id);
 
-        if(Input::get('download') == 'count'){
-
-            $singlemusic -> count = $singlemusic -> count +1 ;
-
-            $singlemusic -> save();
-        }
-
-
 
         return view('mobile.single.count') -> with('singlemusic',$singlemusic);
 
 
+    }
+
+    public function SetCount($id){
+
+        $singlemusic = SingleMusic::findOrNew($id);
+
+
+
+        $singlemusic -> count = $singlemusic -> count +1 ;
+
+        $singlemusic -> save();
+
+
+
+
+        return view('mobile.single.count') -> with('singlemusic',$singlemusic);
     }
 }
