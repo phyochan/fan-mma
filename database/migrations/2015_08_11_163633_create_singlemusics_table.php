@@ -23,6 +23,7 @@ class CreateSinglemusicsTable extends Migration
             $table->string('categories');
             $table->text('content');
             $table->string('author');
+            $table ->integer('count');
             $table->timestamps();
         });
     }

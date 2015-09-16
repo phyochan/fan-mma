@@ -10,7 +10,7 @@ class SingleMusic extends Model
 
     protected $table = "singlemusics";
 
-    protected $fillable = ['title', 'image', 'mp3','language','categories','content'];
+    protected $fillable = ['title', 'image', 'mp3','language','categories','count','content'];
 
 
 }
