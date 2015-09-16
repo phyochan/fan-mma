@@ -58,6 +58,7 @@ Route::group(['middleware' => 'apiauth'], function() {
 
 });
 
+Route::post('/backend/admin/mobile/songs/api/getcount/{id}','MobileSingleController@GetCount');
 Route::get('/backend/admin/mobile/songs/api/getcount/{id}','MobileSingleController@GetCount');
 
 

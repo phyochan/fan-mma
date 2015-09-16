@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\SingleMusic;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Input;
 
 class MobileSingleController extends Controller
 {
@@ -228,7 +229,7 @@ class MobileSingleController extends Controller
 
         $singlemusic = SingleMusic::findOrNew($id);
 
-        if($_POST('download' == 'count')){
+        if(Input::get('download') == 'count'){
 
             $singlemusic -> count = $singlemusic -> count +1 ;
 
@@ -237,7 +238,7 @@ class MobileSingleController extends Controller
 
 
 
-        return null;
+        return view('mobile.single.count') -> with('singlemusic',$singlemusic);
 
 
     }
