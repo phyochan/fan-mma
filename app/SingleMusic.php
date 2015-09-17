@@ -13,4 +13,5 @@ class SingleMusic extends Model
     protected $fillable = ['title', 'image', 'mp3','language','categories','count','content'];
 
 
+
 }

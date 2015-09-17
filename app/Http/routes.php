@@ -42,6 +42,8 @@ Route::get('/error/loginfail',function(){
 
 
 
+
+
 Route::group(['middleware' => 'apiauth'], function() {
 
     Route::get('/backend/admin/mobile/songs/api/all',function(){
@@ -58,6 +60,7 @@ Route::group(['middleware' => 'apiauth'], function() {
     Route::get('/api/getcount/{id}','MobileSingleController@GetCount');
 
 
+    Route::get('/api/categories/{categoried}','CategoriesController@show');
 
 
 
