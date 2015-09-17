@@ -54,13 +54,14 @@ Route::group(['middleware' => 'apiauth'], function() {
 
     });
 
+    Route::post('/api/getcount/{id}','MobileSingleController@SetCount');
+    Route::get('/api/getcount/{id}','MobileSingleController@GetCount');
+
+
+
 
 
 });
-
-Route::post('/api/getcount/{id}','MobileSingleController@SetCount');
-Route::get('/api/getcount/{id}','MobileSingleController@GetCount');
-
 
 
 

@@ -8,7 +8,7 @@
 
 <form action="{{url('/api/getcount',$singlemusic -> id)}}" method="post">
 
-    
+
 
     <input type="submit" name="download" value="count">
 
