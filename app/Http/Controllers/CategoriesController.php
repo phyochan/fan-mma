@@ -17,7 +17,7 @@ class CategoriesController extends Controller {
 
     public function show($categories){
 
-        
+
 
         $singlemusic = \App\SingleMusic::where('categories', 'LIKE', $categories)->get();
 
