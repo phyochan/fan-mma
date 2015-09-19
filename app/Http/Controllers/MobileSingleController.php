@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use App\SingleMusic;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Storage;
 
 class MobileSingleController extends Controller
 {
@@ -49,31 +50,17 @@ class MobileSingleController extends Controller
         $this->validate($request, [
             'songname' => 'required|max:1000',
             'singer' => 'required|max:255',
-            'mp3' => 'required',
             'content' => 'required'
 
         ]);
 
+
         $singlemusic = new SingleMusic();
 
-
-        $imagepath = public_path().'/upload/image';
-
-
-        $imagename = \Input::file('photo')->getClientOriginalExtension();
-
-
-
-        $imgrename = str_random(20);
-
-        $imgFileName = $imgrename.".".$imagename;
-
-        \Input::file('photo')->move($imagepath, $imgrename.".".$imagename);
 
 
         $singlemusic -> songtitle = $request -> input( 'songname');
 
-        $singlemusic -> mp3 = $request -> input('mp3');
 
         $singlemusic -> singer = $request -> input('singer');
 
@@ -83,18 +70,83 @@ class MobileSingleController extends Controller
 
         $singlemusic -> content = $request -> input('content');
 
-        $singlemusic -> image = asset('/upload/image/'.$imgrename.".".$imagename);
-
-        $singlemusic -> imageName = $imgFileName;
-
-        $singlemusic -> author =  \Auth::user() -> nickname;
-
-        $singlemusic -> save();
-
-        \Flash::overlay('Mobile Api Added!',"Complete");
 
 
-        return \Redirect::to('/backend/admin/mobile/songs/');
+
+
+
+        if(\Input::hasfile('mp3')) {
+
+
+            if (\Input::file('mp3')->getClientOriginalExtension() != "mp3") {
+
+                $error = array();
+                $error[] = "File type must be mp3";
+                $validator = $error;
+
+
+                return \Redirect::to('/backend/admin/mobile/songs/create')->withInput()->withErrors($validator);
+
+            } else {
+
+                $mp3path = public_path().'/upload/mp3';
+
+                $mp3name = \Input::file('mp3')->getClientOriginalname();
+
+
+
+                \Input::file('mp3')->move($mp3path, $mp3name);
+
+
+                $uploadedfile = Storage::get($mp3name);
+
+
+
+
+                Storage::disk('s3')->put($mp3name, $uploadedfile);
+
+                $url = Storage::disk('s3')->getDriver()->getAdapter()->getClient()->getObjectUrl('myanmarmusicart',$mp3name);
+
+
+
+                \File::delete(public_path() . "/upload/mp3/" . $mp3name);
+
+                $singlemusic->mp3 = $url;
+
+
+            }
+
+        }
+
+            $imagepath = public_path().'/upload/image';
+
+
+            $imagename = \Input::file('photo')->getClientOriginalExtension();
+
+
+
+            $imgrename = str_random(20);
+
+            $imgFileName = $imgrename.".".$imagename;
+
+            \Input::file('photo')->move($imagepath, $imgrename.".".$imagename);
+
+
+
+
+            $singlemusic -> image = asset('/upload/image/'.$imgrename.".".$imagename);
+
+            $singlemusic -> imageName = $imgFileName;
+
+            $singlemusic -> author =  \Auth::user() -> nickname;
+
+            $singlemusic -> save();
+
+            \Flash::overlay('Mobile Api Added!',"Complete");
+
+
+            return \Redirect::to('/backend/admin/mobile/songs/');
+
 
 
 
