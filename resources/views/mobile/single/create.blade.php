@@ -65,14 +65,7 @@
 
                             </div>
 
-                            {{-- <div class="form-group">
-
-                                <label>Mp3 Link</label>
-
-                                <input type="text" class="form-control" name="mp3" required placeholder="Enter mp3 link">
-
-
-                            </div> --}}
+                          
 
                             <div class="form-group">
 
