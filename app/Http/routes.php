@@ -61,6 +61,7 @@ Route::group(['middleware' => 'apiauth'], function() {
 
 
     Route::get('/api/categories/{categoried}','CategoriesController@show');
+    Route::get('/api/language/{language}','LanguageController@show');
 
 
 

@@ -16,6 +16,23 @@
                 </div>
             </div>
 
+
+            @if (count($errors) > 0)
+                <div class="alert alert-danger">
+                    <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
+
+            @if(Session::has('error'))
+                <p class="errors">{!! Session::get('error') !!}</p>
+            @endif
+
             <div class="container">
 
                 <div class="row">
@@ -49,7 +66,10 @@
 
                             </div>
 
-                            <div class="form-group">
+                         {{--
+
+
+                          <div class="form-group">
 
                                 <label>Mp3 Link</label>
 
@@ -57,6 +77,18 @@
 
 
                             </div>
+
+                            --}}
+
+                            <div class="form-group">
+
+
+                                <label>Mp3 သီခ်င္း</label>
+
+                                <input  type="file" class="form-control" name="mp3"   accept=".mp3">
+
+                            </div>
+
 
 
                             <div class="form-group">

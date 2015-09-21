@@ -200,7 +200,6 @@ class MobileSingleController extends Controller
         $this->validate($request, [
             'songname' => 'required|max:1000',
             'singer' => 'required|max:255',
-            'mp3' => 'required',
             'content' => 'required'
 
         ]);
@@ -228,6 +227,50 @@ class MobileSingleController extends Controller
 
             $singlemusic -> imageName = $imgFileName;
 
+        }
+
+
+        if(\Input::hasfile('mp3')){
+
+            if (\Input::file('mp3')->getClientOriginalExtension() != "mp3") {
+
+                $error = array();
+                $error[] = "File type must be mp3";
+                $validator = $error;
+
+
+                return \Redirect::to('/backend/admin/mobile/songs/create')->withInput()->withErrors($validator);
+
+            } else {
+
+
+
+                $mp3path = public_path().'/upload/mp3';
+
+                $mp3name = \Input::file('mp3')->getClientOriginalname();
+
+
+
+                \Input::file('mp3')->move($mp3path, $mp3name);
+
+
+                $uploadedfile = Storage::get($mp3name);
+
+
+
+
+                Storage::disk('s3')->put($mp3name, $uploadedfile);
+
+                $url = Storage::disk('s3')->getDriver()->getAdapter()->getClient()->getObjectUrl('myanmarmusicart',$mp3name);
+
+
+
+                \File::delete(public_path() . "/upload/mp3/" . $mp3name);
+
+                $singlemusic->mp3 = $url;
+
+
+            }
         }
 
 

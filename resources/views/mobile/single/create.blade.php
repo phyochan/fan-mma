@@ -79,7 +79,7 @@
 
                                     <label>Mp3 သီခ်င္း</label>
 
-                                    <input  type="file" class="form-control" name="mp3">
+                                    <input  type="file" class="form-control" name="mp3" required  accept=".mp3">
 
                              </div>
 
@@ -138,9 +138,6 @@
 
 
 
-
-
-
                         </form>
 
 
@@ -156,5 +153,7 @@
 
         </section>
     </section>
+
+
 
 @endsection
