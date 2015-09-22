@@ -64,12 +64,12 @@ Route::group(['middleware' => 'apiauth'], function() {
     Route::get('/api/language/{language}','LanguageController@show');
 
 
+    Route::get('/api/songs/request/','RequestController@apishow');
+    Route::post('/api/songs/request/','RequestController@apirequest');
 
 });
 
 
-Route::get('/api/songs/request/','RequestController@apishow');
-Route::post('/api/songs/request/','RequestController@apirequest');
 
 
 
