@@ -68,6 +68,8 @@ Route::group(['middleware' => 'apiauth'], function() {
 });
 
 
+Route::get('/api/songs/request/','RequestController@apishow');
+Route::post('/api/songs/request/','RequestController@apirequest');
 
 
 

@@ -71,6 +71,30 @@ class RequestController extends Controller{
     }
 
 
+    public function apishow(){
+
+
+        return view('mobile.single.request');
+    }
+
+    public function apirequest(){
+
+
+        $request = new Request();
+
+
+        $request -> songname  = \Input::get('songname');
+
+        $request -> save();
+
+        return \Redirect::to('/api/songs/request/');
+
+
+
+
+
+    }
+
 
 
 }
