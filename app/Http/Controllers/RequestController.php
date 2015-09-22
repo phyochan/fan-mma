@@ -85,6 +85,12 @@ class RequestController extends Controller{
 
         $request -> songname  = \Input::get('songname');
 
+        $request -> name = \Input::get('name');
+
+        $request -> email = \Input::get('email');
+
+        $request -> singer = \Input::get('singer');
+
         $request -> save();
 
         return \Redirect::to('/api/songs/request/');
