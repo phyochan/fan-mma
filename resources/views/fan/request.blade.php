@@ -60,7 +60,7 @@
                     <input type="text" id="email" name="email" placeholder="Enter your email..." value="{{old('email')}}">
 
 
-                    <button onclick="ShowProgressAnimation();" type="submit">Submit</button>
+                    <button onclick="ShowProgressAnimation();" value="submit" name="submit" type="submit">Submit</button>
 
 
                 </form>

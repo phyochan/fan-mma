@@ -44,6 +44,26 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="count.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/mobile/single/count.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.5">
+              <caret line="12" column="54" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="request.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/fan/request.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.208333">
+              <caret line="57" column="57" selection-start-line="57" selection-start-column="57" selection-end-line="57" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="filesystems.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/filesystems.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -114,6 +134,7 @@
         <option value="$PROJECT_DIR$/resources/views/mobile/single/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/mobile/single/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MobileSingleController.php" />
+        <option value="$PROJECT_DIR$/resources/views/fan/request.blade.php" />
         <option value="$PROJECT_DIR$/config/database.php" />
       </list>
     </option>
@@ -1025,6 +1046,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.083334">
           <caret line="211" column="0" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/mobile/single/count.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.5">
+          <caret line="12" column="54" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/fan/request.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.208333">
+          <caret line="57" column="57" selection-start-line="57" selection-start-column="57" selection-end-line="57" selection-end-column="57" />
           <folding />
         </state>
       </provider>
