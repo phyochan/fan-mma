@@ -126,13 +126,13 @@ class SendController extends Controller{
     public function apisend(){
 
 
-        $mp3path = public_path().'/upload/send/mp3';
+      //  $mp3path = public_path().'/upload/send/mp3';
 
-        $mp3name = \Input::file('mp3')->getClientOriginalname();
+       // $mp3name = \Input::file('mp3')->getClientOriginalname();
 
 
 
-        \Input::file('mp3')->move($mp3path, $mp3name);
+      //  \Input::file('mp3')->move($mp3path, $mp3name);
 
 
         $imagepath = public_path().'/upload/send/image';
@@ -159,11 +159,11 @@ class SendController extends Controller{
 
         $send -> email = \Input::get('email');
 
-        $send -> mp3 = asset('upload/send/mp3/'.$mp3name);
+     //   $send -> mp3 = asset('upload/send/mp3/'.$mp3name);
 
         $send -> image = asset('upload/send/image/'.$imgFileName);
 
-        $send -> mp3filename = $mp3name;
+      //  $send -> mp3filename = $mp3name;
 
         $send -> imagefilename = $imgFileName;
 
