@@ -55,7 +55,7 @@
       <file leaf-file-name="SendController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SendController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.1785715">
+            <state vertical-scroll-proportion="0.56632656">
               <caret line="167" column="46" selection-start-line="167" selection-start-column="46" selection-end-line="167" selection-end-column="46" />
               <folding />
             </state>
@@ -1010,7 +1010,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SendController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1785715">
+        <state vertical-scroll-proportion="0.56632656">
           <caret line="167" column="46" selection-start-line="167" selection-start-column="46" selection-end-line="167" selection-end-column="46" />
           <folding />
         </state>

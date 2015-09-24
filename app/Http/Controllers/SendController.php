@@ -171,7 +171,7 @@ class SendController extends Controller{
         $send -> save();
 
 
-        return \Redirect::to('/api/ug/send');
+        return \Redirect::to('/api/songs/send');
 
 
     }
