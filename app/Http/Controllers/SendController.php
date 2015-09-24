@@ -151,13 +151,13 @@ class SendController extends Controller{
 
         $send = new Sends();
 
-        $send -> name =  \Input::get('name');
+        //$send -> name =  \Input::get('name');
 
-        $send -> songname =\Input::get('songname');
+        //$send -> songname =\Input::get('songname');
 
-        $send -> singer = \Input::get('singer');
+        //$send -> singer = \Input::get('singer');
 
-        $send -> email = \Input::get('email');
+        //$send -> email = \Input::get('email');
 
      //   $send -> mp3 = asset('upload/send/mp3/'.$mp3name);
 
