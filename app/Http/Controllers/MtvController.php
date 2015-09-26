@@ -36,11 +36,29 @@ public function create(){
 
         $mtv =  new Mtv();
 
+        $imagepath = public_path().'/upload/image';
 
+
+        $imagename = \Input::file('photo')->getClientOriginalExtension();
+
+
+
+        $imgrename = str_random(20);
+
+        $imgFileName = $imgrename.".".$imagename;
+
+        \Input::file('photo')->move($imagepath, $imgrename.".".$imagename);
+
+
+
+
+        $mtv -> image = asset('/upload/image/'.$imgrename.".".$imagename);
+
+        $mtv -> imageName = $imgFileName;
 
         $mtv -> songtitle = $request -> input( 'songname');
         $mtv -> singer = $request -> input('singer');
-        $mtv -> youtubeid = $request -> input('youtubeid');
+        $mtv -> mp3 = $request -> input('youtubeid');
         $mtv-> author =  \Auth::user() -> nickname;
 
         $mtv -> save();
@@ -87,10 +105,33 @@ public function create(){
         $mtv =  Mtv::findOrNew($id);
 
 
+        if(\Input::hasfile('photo')){
+
+
+            $imagepath = public_path().'/upload/image';
+
+
+            $imagename = \Input::file('photo')->getClientOriginalExtension();
+
+            $imgrename = str_random(20);
+
+
+            $mtv-> image = asset('/upload/image/'.$imgrename.".".$imagename);
+
+
+            $imgFileName = $imgrename.".".$imagename;
+
+            \Input::file('photo')->move($imagepath, $imgrename.".".$imagename);
+
+            $mtv -> imageName = $imgFileName;
+
+        }
+
+
 
         $mtv -> songtitle = $request -> input( 'songname');
         $mtv -> singer = $request -> input('singer');
-        $mtv -> youtubeid = $request -> input('youtubeid');
+        $mtv -> mp3 = $request -> input('youtubeid');
         $mtv-> author =  \Auth::user() -> nickname;
 
         $mtv -> save();

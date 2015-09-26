@@ -39,7 +39,7 @@
                     <div class="col-md-4 col-md-offset-4">
 
 
-                        <form action="{{url('/backend/admin/mobile/mtv/')}}" method="POST" >
+                        <form action="{{url('/backend/admin/mobile/mtv/')}}" enctype="multipart/form-data" method="POST" >
 
                             <input type="hidden" name="_token" value="{{ csrf_token()}}">
 
@@ -55,6 +55,13 @@
 
                                 <label>Singer Name</label>
                                 <input type="text" class="form-control"  name="singer" required placeholder="Enter Singer Name" >
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label>Photo Upload</label>
+                                <input type="file" class="form-control"  name="photo" required accept="image/*" >
 
                             </div>
 

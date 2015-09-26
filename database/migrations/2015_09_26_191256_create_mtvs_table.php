@@ -15,8 +15,9 @@ class CreateMtvsTable extends Migration
         Schema::create('mtvs', function (Blueprint $table) {
             $table->increments('id');
             $table->string('songtitle');
-            $table->string('youtubeid');
-            $table->string('download');
+            $table->string('image');
+            $table->string('mp3'); //youtubeid
+            $table->string('categories'); //downloadlink
             $table->string('author');
             $table->string('singer');
 
