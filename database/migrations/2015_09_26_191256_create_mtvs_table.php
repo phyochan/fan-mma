@@ -20,6 +20,7 @@ class CreateMtvsTable extends Migration
             $table->string('categories'); //downloadlink
             $table->string('author');
             $table->string('singer');
+            $table -> string ('imagefilename');
 
             $table->timestamps();
         });
