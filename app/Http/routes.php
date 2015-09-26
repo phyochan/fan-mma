@@ -44,6 +44,7 @@ Route::get('/error/loginfail',function(){
 
 
 
+
 Route::group(['middleware' => 'apiauth'], function() {
 
     Route::get('/backend/admin/mobile/songs/api/all',function(){
@@ -55,6 +56,19 @@ Route::group(['middleware' => 'apiauth'], function() {
 
 
     });
+
+    Route::get('/api/mtv/',function(){
+
+        $mtv = \App\Mtv::orderBy('id', 'desc')->get();
+
+
+        return \Response::json($mtv);
+
+
+    });
+
+
+
 
     Route::post('/api/getcount/{id}','MobileSingleController@SetCount');
     Route::get('/api/getcount/{id}','MobileSingleController@GetCount');
@@ -91,6 +105,16 @@ Route::group(['middleware' => 'auth'], function() {
 
     });
 
+    Route::get('/backend/admin/mobile/mtv/all',function(){
+
+        $mtv = \App\Mtv::orderBy('id', 'desc')->get();
+
+
+        return \Response::json($mtv);
+
+
+    });
+
 
 
     Route::get('/logout','LoginController@dologout');
@@ -107,7 +131,13 @@ Route::group(['middleware' => 'auth'], function() {
 
 
 
+    Route::resource('/backend/admin/mobile/mtv/','MtvController');
+    Route::get('/backend/admin/mobile/mtv/{id}','MtvController@show');
 
+    Route::post('/backend/admin/mobile/mtv/{id}','MtvController@update');
+
+    Route::delete('/backend/admin/mobile/mtv/delete/{id}','MtvController@destroy');
+    Route::get('/backend/admin/mobile/mtv/{id}/edit','MtvController@edit');
 
 
 });

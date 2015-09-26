@@ -10,6 +10,7 @@ use App\SingleMusic;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Storage;
+use App\Mtv;
 
 class MobileSingleController extends Controller
 {
@@ -22,8 +23,11 @@ class MobileSingleController extends Controller
     {
         //
         $singlemusics = SingleMusic::orderBy('id','desc')->paginate(10);
+        $mtvs = Mtv::orderBy('id','desc')->paginate(10);
 
-        return view('mobile.single.index')->with('singlemusics',$singlemusics);
+
+
+        return view('mobile.single.index')->with('singlemusics',$singlemusics)->with('mtvs',$mtvs);
     }
 
     /**
