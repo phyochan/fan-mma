@@ -15,12 +15,11 @@ class CreateMtvsTable extends Migration
         Schema::create('mtvs', function (Blueprint $table) {
             $table->increments('id');
             $table->string('songtitle');
-            $table->string('image');
             $table->string('youtubeid'); //youtubeid
             $table->string('downloadlink'); //downloadlink
             $table->string('author');
             $table->string('singer');
-            $table -> string ('imageName');
+
 
             $table->timestamps();
         });

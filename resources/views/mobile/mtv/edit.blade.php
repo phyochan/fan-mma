@@ -58,13 +58,6 @@
 
                             </div>
 
-                            <div class="form-group">
-
-                                <label>Photo Upload</label>
-                                <input type="file" class="form-control"  name="photo" required accept="image/*" >
-
-                            </div>
-
 
 
                             <div class="form-group">
