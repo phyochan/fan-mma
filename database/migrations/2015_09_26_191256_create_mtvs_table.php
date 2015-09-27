@@ -16,8 +16,8 @@ class CreateMtvsTable extends Migration
             $table->increments('id');
             $table->string('songtitle');
             $table->string('image');
-            $table->string('mp3'); //youtubeid
-            $table->string('categories'); //downloadlink
+            $table->string('youtubeid'); //youtubeid
+            $table->string('downloadlink'); //downloadlink
             $table->string('author');
             $table->string('singer');
             $table -> string ('imageName');

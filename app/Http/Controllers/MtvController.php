@@ -58,7 +58,7 @@ public function create(){
 
         $mtv -> songtitle = $request -> input( 'songname');
         $mtv -> singer = $request -> input('singer');
-        $mtv -> mp3 = $request -> input('youtubeid');
+        $mtv -> youtubeid = $request -> input('youtubeid');
         $mtv-> author =  \Auth::user() -> nickname;
 
         $mtv -> save();
@@ -131,7 +131,7 @@ public function create(){
 
         $mtv -> songtitle = $request -> input( 'songname');
         $mtv -> singer = $request -> input('singer');
-        $mtv -> mp3 = $request -> input('youtubeid');
+        $mtv -> youtubeid = $request -> input('youtubeid');
         $mtv-> author =  \Auth::user() -> nickname;
 
         $mtv -> save();
