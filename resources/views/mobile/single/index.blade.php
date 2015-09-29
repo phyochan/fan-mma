@@ -159,6 +159,7 @@
                     <th>Song Title</th>
                     <th>Author</th>
                     <th>Singer</th>
+                    <th>Youtube ID</th>
 
                     <th></th>
                     <th></th>
@@ -181,6 +182,8 @@
                         <td>{{$mtv -> id}}</td>
                         <td>{{$mtv -> songtitle}}</td>
                         <td>{{$mtv -> author}}</td>
+                        <td>{{$mtv -> singer }}</td>
+                        <td>{{$mtv -> youtubeid}}</td>
 
                         <td>
 
