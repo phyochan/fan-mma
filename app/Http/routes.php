@@ -85,6 +85,14 @@ Route::group(['middleware' => 'apiauth'], function() {
     Route::get('/api/songs/send/','SendController@apishow');
     Route::post('/api/songs/send/','SendController@apisend');
 
+
+    Route::get('/api/update/version',function(){
+
+        return ("1.1");
+
+    });
+
+
 });
 
 
