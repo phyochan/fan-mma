@@ -279,9 +279,7 @@ class MobileSingleController extends Controller
 
 
         $singlemusic -> songtitle = $request -> input( 'songname');
-
-        $singlemusic -> mp3 = $request -> input('mp3');
-
+        
         $singlemusic -> singer = $request -> input('singer');
 
         $singlemusic -> language = $request -> input('language');
