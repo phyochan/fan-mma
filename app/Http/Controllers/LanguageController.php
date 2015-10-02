@@ -19,7 +19,7 @@ class LanguageController extends Controller {
 
 
 
-        $singlemusic = \App\SingleMusic::where('language', 'LIKE', $language)->get();
+        $singlemusic = \App\SingleMusic::orderBy('id', 'desc') -> where('language', 'LIKE', $language)->get();
 
         return \Response::json($singlemusic);
     }

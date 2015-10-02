@@ -19,7 +19,7 @@ class CategoriesController extends Controller {
 
 
 
-        $singlemusic = \App\SingleMusic::where('categories', 'LIKE', $categories)->get();
+        $singlemusic = \App\SingleMusic::orderBy('id', 'desc') -> where('categories', 'LIKE', $categories)->get();
 
         return \Response::json($singlemusic);
     }
