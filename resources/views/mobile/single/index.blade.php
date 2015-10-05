@@ -244,7 +244,7 @@
 
             </table>
 
-            {!! $mtv->render() !!}
+            {!! $mtvs->render() !!}
 
 
 
