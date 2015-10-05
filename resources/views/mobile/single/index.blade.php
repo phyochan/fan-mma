@@ -244,7 +244,7 @@
 
             </table>
 
-            {!! $singlemusics->render() !!}
+            {!! $mtv->render() !!}
 
 
 
