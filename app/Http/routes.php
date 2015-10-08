@@ -57,6 +57,23 @@ Route::group(['middleware' => 'apiauth'], function() {
 
     });
 
+    Route::get('/api/popular/',function(){
+
+
+        $popular = App\SingleMusic::orderBy('count', 'desc')->get();
+
+
+
+
+        return \Response::json($popular);
+
+
+
+    });
+
+
+
+
     Route::get('/api/mtv/',function(){
 
         $mtv = \App\Mtv::orderBy('id', 'desc')->get();
@@ -75,6 +92,7 @@ Route::group(['middleware' => 'apiauth'], function() {
 
 
     Route::get('/api/categories/{categoried}','CategoriesController@show');
+    Route::get('/api/language/{language}','LanguageController@show');
 
 
     Route::get('/api/songs/request/','RequestController@apishow');
@@ -94,7 +112,10 @@ Route::group(['middleware' => 'apiauth'], function() {
 
 });
 
-Route::get('/api/language/{language}','LanguageController@show');
+
+
+
+
 
 
 
