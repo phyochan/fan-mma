@@ -60,7 +60,7 @@ Route::group(['middleware' => 'apiauth'], function() {
     Route::get('/api/popular/',function(){
 
 
-        $popular = App\SingleMusic::orderBy('count', 'desc')->get();
+        $popular = App\SingleMusic::orderBy('count', 'desc')->take(20)->get();
 
 
 
