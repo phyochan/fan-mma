@@ -21,6 +21,9 @@
     <a href="{{$music}}" target="_blank">{{$music}}</a>
 
 
+    <p>Myanmar Music Art Android App ကို Download ရယူရန္</p>
+
+    <a href="" target="_blank">http://app.myanmarmusicart.com/</a>
 
     <p>မိမိ ေတာင္းဆုိလုိတဲ့ သီခ်င္းေတြ မိမိကုိယ္တုိင္ သီဆုိထားတဲ့ သီခ်င္းေတြကုိ ေအာက္ပါ Link မွာေတာင္းဆုိႏုိင္ပါတယ္။</p>
 
