@@ -105,7 +105,7 @@ Route::group(['middleware' => 'apiauth'], function() {
 
     Route::get('/api/update/version',function(){
 
-        return ("1.0.4");
+        return ("1.1");
 
     });
 
