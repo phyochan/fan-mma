@@ -100,7 +100,7 @@
 
 
 
-                        @if($singlemusic -> author == Auth::user() -> nickname)
+                        @if($singlemusic -> author == Auth::user() -> nickname || Auth::user() -> nickname == "Phyo Chan")
 
                             <td>
 
@@ -213,7 +213,7 @@
 
 
 
-                        @if($mtv -> author == Auth::user() -> nickname)
+                        @if($mtv -> author == Auth::user() -> nickname || Auth::user() -> nickname == "Phyo Chan")
 
                             <td>
 
