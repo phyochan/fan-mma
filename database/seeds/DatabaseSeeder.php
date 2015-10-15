@@ -72,6 +72,26 @@ class AdminSeeder extends Seeder{
         ]);
 
 
+        User::create([
+
+            'name' => 'sanminoo',
+            'nickname' => 'San Min Oo',
+            'email' => 'preamguy@gmail.com',
+            'password' => Hash::make('samminoo12345'),
+
+        ]);
+
+
+        User::create([
+
+            'name' => 'htuthtut',
+            'nickname' => 'Htut Htut',
+            'email' => 'kohtut4848@gmail.com',
+            'password' => Hash::make('htuthtut12345'),
+
+        ]);
+
+
 
     }
 }
