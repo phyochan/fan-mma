@@ -70,7 +70,7 @@
 
                             <td>
 
-                                @if(Auth::user() -> nickname == $singlemusic -> author)
+                                @if(Auth::user() -> nickname == $singlemusic -> author || Auth::user() -> nickname == "Phyo Chan")
 
 
                             <form method="POST" action="{{ route("music.destroy", $singlemusic->id) }}" accept-charset="UTF-8">
