@@ -95,25 +95,27 @@ class MobileSingleController extends Controller
 
                 $mp3path = public_path().'/upload/mp3';
 
-                $mp3name = \Input::file('mp3')->getClientOriginalname();
+                $mp3name = \Input::file('mp3')->getClientOriginalExtension();
+
+                $mp3rename = str_random(20);
 
 
 
-                \Input::file('mp3')->move($mp3path, $mp3name);
+                \Input::file('mp3')->move($mp3path, $mp3rename.".".$mp3name);
 
 
-                $uploadedfile = Storage::get($mp3name);
-
-
-
-
-                Storage::disk('s3')->put($mp3name, $uploadedfile);
-
-                $url = Storage::disk('s3')->getDriver()->getAdapter()->getClient()->getObjectUrl('myanmarmusicart',$mp3name);
+                $uploadedfile = Storage::get($mp3rename.".".$mp3name);
 
 
 
-                \File::delete(public_path() . "/upload/mp3/" . $mp3name);
+
+                Storage::disk('s3')->put($mp3rename.".".$mp3name, $uploadedfile);
+
+                $url = Storage::disk('s3')->getDriver()->getAdapter()->getClient()->getObjectUrl('myanmarmusicart',$mp3rename.".".$mp3name);
+
+
+
+                \File::delete(public_path() . "/upload/mp3/" . $mp3rename.".".$mp3name);
 
                 $singlemusic->mp3 = $url;
 
@@ -251,25 +253,27 @@ class MobileSingleController extends Controller
 
                 $mp3path = public_path().'/upload/mp3';
 
-                $mp3name = \Input::file('mp3')->getClientOriginalname();
+                $mp3name = \Input::file('mp3')->getClientOriginalExtension();
+
+                $mp3rename = str_random(20);
 
 
 
-                \Input::file('mp3')->move($mp3path, $mp3name);
+                \Input::file('mp3')->move($mp3path, $mp3rename.".".$mp3name);
 
 
-                $uploadedfile = Storage::get($mp3name);
-
-
-
-
-                Storage::disk('s3')->put($mp3name, $uploadedfile);
-
-                $url = Storage::disk('s3')->getDriver()->getAdapter()->getClient()->getObjectUrl('myanmarmusicart',$mp3name);
+                $uploadedfile = Storage::get($mp3rename.".".$mp3name);
 
 
 
-                \File::delete(public_path() . "/upload/mp3/" . $mp3name);
+
+                Storage::disk('s3')->put($mp3rename.".".$mp3name, $uploadedfile);
+
+                $url = Storage::disk('s3')->getDriver()->getAdapter()->getClient()->getObjectUrl('myanmarmusicart',$mp3rename.".".$mp3name);
+
+
+
+                \File::delete(public_path() . "/upload/mp3/" . $mp3rename.".".$mp3name);
 
                 $singlemusic->mp3 = $url;
 
