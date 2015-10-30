@@ -18,7 +18,7 @@
 
             @include('flash::message')
 
-            <p class="lead">Mp3မ်ားတင္ရန္</p>
+            <p class="lead">Mp3မ်ားတင္ရန္ (Download ျပဳလုုပ္ထားသည့္အေရအတြက္ - {{$mp3downloads}})</p>
 
             <br>
 

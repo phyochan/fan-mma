@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\SingleMusic;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Storage;
 use App\Mtv;
@@ -22,12 +23,16 @@ class MobileSingleController extends Controller
     public function index()
     {
         //
+
         $singlemusics = SingleMusic::orderBy('id','desc')->paginate(10);
         $mtvs = Mtv::orderBy('id','desc')->paginate(10);
 
 
+        $mp3downloads = SingleMusic::where('count', '>=','0')->sum('count');
 
-        return view('mobile.single.index')->with('singlemusics',$singlemusics)->with('mtvs',$mtvs);
+
+
+        return view('mobile.single.index')->with('singlemusics',$singlemusics)->with('mtvs',$mtvs)->with('mp3downloads',$mp3downloads);
     }
 
     /**
