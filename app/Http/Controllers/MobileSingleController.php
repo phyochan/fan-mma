@@ -98,7 +98,7 @@ class MobileSingleController extends Controller
 
             } else {
 
-                $mp3path = public_path().'/upload/mp3';
+                $mp3path = public_path().'/download/mp3';
 
                 $mp3name = \Input::file('mp3')->getClientOriginalExtension();
 
@@ -109,18 +109,20 @@ class MobileSingleController extends Controller
                 \Input::file('mp3')->move($mp3path, $mp3rename.".".$mp3name);
 
 
-                $uploadedfile = Storage::get($mp3rename.".".$mp3name);
+              //  $uploadedfile = Storage::get($mp3rename.".".$mp3name);
 
 
 
 
-                Storage::disk('s3')->put($mp3rename.".".$mp3name, $uploadedfile);
+               // Storage::disk('s3')->put($mp3rename.".".$mp3name, $uploadedfile);
 
-                $url = Storage::disk('s3')->getDriver()->getAdapter()->getClient()->getObjectUrl('myanmarmusicart',$mp3rename.".".$mp3name);
+              //  $url = Storage::disk('s3')->getDriver()->getAdapter()->getClient()->getObjectUrl('myanmarmusicart',$mp3rename.".".$mp3name);
 
 
 
-                \File::delete(public_path() . "/upload/mp3/" . $mp3rename.".".$mp3name);
+               // \File::delete(public_path() . "/upload/mp3/" . $mp3rename.".".$mp3name);
+
+                $url = asset('/download/mp3/'.$mp3rename.".".$mp3name);
 
                 $singlemusic->mp3 = $url;
 
@@ -272,13 +274,15 @@ class MobileSingleController extends Controller
 
 
 
-                Storage::disk('s3')->put($mp3rename.".".$mp3name, $uploadedfile);
+             //   Storage::disk('s3')->put($mp3rename.".".$mp3name, $uploadedfile);
 
-                $url = Storage::disk('s3')->getDriver()->getAdapter()->getClient()->getObjectUrl('myanmarmusicart',$mp3rename.".".$mp3name);
+              //  $url = Storage::disk('s3')->getDriver()->getAdapter()->getClient()->getObjectUrl('myanmarmusicart',$mp3rename.".".$mp3name);
 
 
 
-                \File::delete(public_path() . "/upload/mp3/" . $mp3rename.".".$mp3name);
+             //   \File::delete(public_path() . "/upload/mp3/" . $mp3rename.".".$mp3name);
+
+                $url = asset('/download/mp3/'.$mp3rename.".".$mp3name);
 
                 $singlemusic->mp3 = $url;
 
