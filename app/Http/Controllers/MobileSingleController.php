@@ -258,7 +258,7 @@ class MobileSingleController extends Controller
 
 
 
-                $mp3path = public_path().'/upload/mp3';
+                $mp3path = public_path().'/download/mp3';
 
                 $mp3name = \Input::file('mp3')->getClientOriginalExtension();
 
@@ -269,7 +269,7 @@ class MobileSingleController extends Controller
                 \Input::file('mp3')->move($mp3path, $mp3rename.".".$mp3name);
 
 
-                $uploadedfile = Storage::get($mp3rename.".".$mp3name);
+               // $uploadedfile = Storage::get($mp3rename.".".$mp3name);
 
 
 
