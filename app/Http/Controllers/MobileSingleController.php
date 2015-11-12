@@ -303,7 +303,7 @@ class MobileSingleController extends Controller
 
 
 
-        $singlemusic -> author =  \Auth::user() -> nickname;
+     //   $singlemusic -> author =  \Auth::user() -> nickname;
 
         $singlemusic -> save();
 
