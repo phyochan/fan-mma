@@ -115,7 +115,7 @@ Route::group(['middleware' => 'apiauth'], function() {
 
 
 
-
+Route::get('/api/search/{singer}','SearchController@singer');
 
 
 
