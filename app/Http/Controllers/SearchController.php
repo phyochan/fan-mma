@@ -19,5 +19,13 @@ class SearchController extends Controller{
 
     }
 
+    public function songname($name){
+
+        $singlemusic = \App\SingleMusic::orderBy('id', 'desc') -> where('songtitle', 'LIKE', '%' . $name . '%')->get();
+
+        return \Response::json($singlemusic);
+
+    }
+
 }
 
