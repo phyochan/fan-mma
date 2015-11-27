@@ -127,7 +127,11 @@ class MobileSingleController extends Controller
 
                // \File::delete(public_path() . "/upload/mp3/" . $mp3rename.".".$mp3name);
 
-                $url = asset('/download/mp3/'.\Auth::user()->name."/".$time->year."-".$time->month."/".$mp3name);
+                $encodeMp3name = rawurlencode($mp3name);
+
+                $url = asset('/download/mp3/'.\Auth::user()->name."/".$time->year."-".$time->month."/".$encodeMp3name);
+
+
 
                 $singlemusic->mp3 = $url;
 
@@ -290,7 +294,9 @@ class MobileSingleController extends Controller
 
               //  \File::delete(public_path().'/download/mp3/'. \Auth::user()->name."/". $time->year."-".$time->month."/".$mp3name);
 
-                $url = asset('/download/mp3/'.\Auth::user()->name."/".$time->year."-".$time->month."/".$mp3name);
+                $encodeMp3name = rawurlencode($mp3name);
+
+                $url = asset('/download/mp3/'.\Auth::user()->name."/".$time->year."-".$time->month."/".$encodeMp3name);
 
                 $singlemusic->mp3 = $url;
 
