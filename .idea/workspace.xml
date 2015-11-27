@@ -3,6 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="1f33e171-7f16-4ad1-a791-dbaa1c600196" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/image/27pZiCWdVeWbxh6anyoL.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/image/MpKfP1gKMw1zjFJFGuR6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/image/wfbRDUN0Kk9GtvY5LnrL.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/image/xGDwUvLxiwkqT4WIU2yT.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/image/xTmmgZ65kSV1F6dyB49d.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/image/xf8mSXhyw7P4n8zovJcO.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/image/zpU35CmqPOLnDDtoPI9G.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/MobileSingleController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/MobileSingleController.php" />
     </list>
     <ignored path="blog.iws" />
@@ -80,8 +87,8 @@
       <file leaf-file-name="MobileSingleController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MobileSingleController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5813953">
-              <caret line="279" column="74" selection-start-line="279" selection-start-column="74" selection-end-line="279" selection-end-column="74" />
+            <state vertical-scroll-proportion="0.7209302">
+              <caret line="290" column="16" selection-start-line="290" selection-start-column="16" selection-end-line="290" selection-end-column="16" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
@@ -1135,8 +1142,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MobileSingleController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5813953">
-          <caret line="279" column="74" selection-start-line="279" selection-start-column="74" selection-end-line="279" selection-end-column="74" />
+        <state vertical-scroll-proportion="0.7209302">
+          <caret line="290" column="16" selection-start-line="290" selection-start-column="16" selection-end-line="290" selection-end-column="16" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>

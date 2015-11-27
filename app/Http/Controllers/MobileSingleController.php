@@ -288,7 +288,7 @@ class MobileSingleController extends Controller
 
 
 
-                \File::delete(public_path().'/download/mp3/'. \Auth::user()->name."/". $time->year."-".$time->month."/".$mp3name);
+              //  \File::delete(public_path().'/download/mp3/'. \Auth::user()->name."/". $time->year."-".$time->month."/".$mp3name);
 
                 $url = asset('/download/mp3/'.\Auth::user()->name."/".$time->year."-".$time->month."/".$mp3name);
 
