@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Storage;
 use App\Mtv;
+use Carbon\Carbon;
 
 class MobileSingleController extends Controller
 {
@@ -29,6 +30,7 @@ class MobileSingleController extends Controller
 
 
         $mp3downloads = SingleMusic::where('count', '>=','0')->sum('count');
+
 
 
 
@@ -98,15 +100,18 @@ class MobileSingleController extends Controller
 
             } else {
 
-                $mp3path = public_path().'/download/mp3';
-
-                $mp3name = \Input::file('mp3')->getClientOriginalExtension();
-
-                $mp3rename = str_random(20);
+                $time = Carbon::now();
 
 
+                $mp3path = public_path().'/download/mp3/'. \Auth::user()->name."/". $time->year."-".$time->month;
 
-                \Input::file('mp3')->move($mp3path, $mp3rename.".".$mp3name);
+                $mp3name = \Input::file('mp3')->getClientOriginalName();
+
+               // $mp3rename = str_random(20);
+
+
+
+                \Input::file('mp3')->move($mp3path,$mp3name);
 
 
               //  $uploadedfile = Storage::get($mp3rename.".".$mp3name);
@@ -122,7 +127,7 @@ class MobileSingleController extends Controller
 
                // \File::delete(public_path() . "/upload/mp3/" . $mp3rename.".".$mp3name);
 
-                $url = asset('/download/mp3/'.$mp3rename.".".$mp3name);
+                $url = asset('/download/mp3/'.\Auth::user()->name."/".$time->year."-".$time->month."/".$mp3name);
 
                 $singlemusic->mp3 = $url;
 
@@ -258,33 +263,40 @@ class MobileSingleController extends Controller
 
 
 
-                $mp3path = public_path().'/download/mp3';
-
-                $mp3name = \Input::file('mp3')->getClientOriginalExtension();
-
-                $mp3rename = str_random(20);
+                $time = Carbon::now();
 
 
+                $mp3path = public_path().'/download/mp3/'. \Auth::user()->name."/". $time->year."-".$time->month;
 
-                \Input::file('mp3')->move($mp3path, $mp3rename.".".$mp3name);
+                $mp3name = \Input::file('mp3')->getClientOriginalName();
 
-
-               // $uploadedfile = Storage::get($mp3rename.".".$mp3name);
+                // $mp3rename = str_random(20);
 
 
 
-
-             //   Storage::disk('s3')->put($mp3rename.".".$mp3name, $uploadedfile);
-
-              //  $url = Storage::disk('s3')->getDriver()->getAdapter()->getClient()->getObjectUrl('myanmarmusicart',$mp3rename.".".$mp3name);
+                \Input::file('mp3')->move($mp3path,$mp3name);
 
 
+                //  $uploadedfile = Storage::get($mp3rename.".".$mp3name);
 
-             //   \File::delete(public_path() . "/upload/mp3/" . $mp3rename.".".$mp3name);
 
-                $url = asset('/download/mp3/'.$mp3rename.".".$mp3name);
+
+
+                // Storage::disk('s3')->put($mp3rename.".".$mp3name, $uploadedfile);
+
+                //  $url = Storage::disk('s3')->getDriver()->getAdapter()->getClient()->getObjectUrl('myanmarmusicart',$mp3rename.".".$mp3name);
+
+
+
+                \File::delete(public_path().'/download/mp3/'. \Auth::user()->name."/". $time->year."-".$time->month."/".$mp3name);
+
+                $url = asset('/download/mp3/'.\Auth::user()->name."/".$time->year."-".$time->month."/".$mp3name);
 
                 $singlemusic->mp3 = $url;
+
+
+
+
 
 
             }
