@@ -86,6 +86,11 @@ Route::group(['middleware' => 'apiauth'], function() {
 
 
 
+    Route::get('/api/search/singer/{singer}','SearchController@singer');
+
+    Route::get('/api/search/songtitle/{songtitle}','SearchController@songname');
+
+
 
     Route::post('/api/getcount/{id}','MobileSingleController@SetCount');
     Route::get('/api/getcount/{id}','MobileSingleController@GetCount');
@@ -105,7 +110,7 @@ Route::group(['middleware' => 'apiauth'], function() {
 
     Route::get('/api/update/version',function(){
 
-        return ("1.1");
+        return ("1.2");
 
     });
 
@@ -114,10 +119,6 @@ Route::group(['middleware' => 'apiauth'], function() {
 
 
 
-
-Route::get('/api/search/singer/{singer}','SearchController@singer');
-
-Route::get('/api/search/songtitle/{songtitle}','SearchController@songname');
 
 
 
