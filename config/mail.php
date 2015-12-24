@@ -8,7 +8,7 @@ return [
     'from' => array('address' => 'myanmarmusicart@gmail.com', 'name' => 'Myanmar Music Art'),
     'encryption' => 'tls',
     'username' => 'myanmarmusicart@gmail.com',
-    'password' => 'myanmar12345!@#$%',
+    'password' => 'haytharthaw12345!@#$%',
     'sendmail' => '/usr/sbin/sendmail -bs',
     'pretend' => false,
 
