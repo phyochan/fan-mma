@@ -221,14 +221,9 @@ Route::get('/sendemail2', function () {
 Route::get('/virus',function(){
 
 
-    $test = [
+    $array = array('foo', 'bar');
 
-        "w",
-        "2",
-        "3"
-
-    ];
-
-    return \Response::json($test);
+    //this route should returns json response
+    return $array;
 
 });
