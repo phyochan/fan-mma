@@ -221,11 +221,9 @@ Route::get('/sendemail2', function () {
 Route::get('/virus',function(){
 
 
-    $popular = App\SingleMusic::orderBy('count', 'desc')->take(20)->get();
+    $array = array('fo', 'bar');
 
-
-
-
-    return \Response::json($popular);
+    //this route should returns json response
+    return $array;
 
 });
