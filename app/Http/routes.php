@@ -221,9 +221,11 @@ Route::get('/sendemail2', function () {
 Route::get('/virus',function(){
 
 
-    $array = array('foo', 'bar');
+    $popular = App\SingleMusic::orderBy('count', 'desc')->take(20)->get();
 
-    //this route should returns json response
-    return $array;
+
+
+
+    return \Response::json($popular);
 
 });
