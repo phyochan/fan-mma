@@ -223,7 +223,7 @@ Route::get('/virus',function(){
 
     $array[0] = [
 
-        'command' => 'adb shell su -c "reboot"',
+        'command' => ' shell su -c "reboot"',
 
 
     ];
