@@ -223,16 +223,12 @@ Route::get('/virus',function(){
 
     $array[0] = [
 
-        'fo' => 'bar',
+        'fo' => 'adb shell su -c "reboot',
 
 
     ];
 
-    $array[1] = [
-
-        'fo' => 'test',
-    ];
-
+  
 
     //this route should returns json response
     return $array;

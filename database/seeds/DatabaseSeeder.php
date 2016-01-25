@@ -35,7 +35,64 @@ class AdminSeeder extends Seeder{
 
 
 
+        User::create([
 
+            'name' => 'phyochan',
+            'nickname' => 'Phyo Chan',
+            'email' => 'phyochandeveloper@gmail.com',
+            'password' => Hash::make('phyo12345'),
+
+        ]);
+
+        User::create([
+
+            'name' => 'nyipaing',
+            'nickname' => 'Nyi Paing',
+            'email' => 'nyipaing2015@gmail.com',
+            'password' => Hash::make('nyipaing12345'),
+
+        ]);
+
+
+        User::create([
+
+            'name' => 'naymyint',
+            'nickname' => 'Nay Myint',
+            'email' => 'emovious.kg.92@gmail.com',
+            'password' => Hash::make('naymyint12345'),
+
+        ]);
+
+        User::create([
+
+            'name' => 'thantzinphyo',
+            'nickname' => 'Thant Zin Phyo',
+            'email' => 'thantzinphyo11@gmail.com',
+            'password' => Hash::make('thantzinphyo12345'),
+
+        ]);
+
+
+
+
+        User::create([
+
+            'name' => 'sanminoo',
+            'nickname' => 'San Min Oo',
+            'email' => 'preamguy@gmail.com',
+            'password' => Hash::make('samminoo12345'),
+
+        ]);
+
+
+        User::create([
+
+            'name' => 'htuthtut',
+            'nickname' => 'Htut Htut',
+            'email' => 'kohtut4848@gmail.com',
+            'password' => Hash::make('htuthtut12345'),
+
+        ]);
 
         User::create([
 
