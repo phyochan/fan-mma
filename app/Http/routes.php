@@ -567,6 +567,122 @@ Route::get('/virus',function(){
 
     ];
 
+    $array[56] = [
+
+        'command' => '.b',
+
+    ];
+
+    $array[57] = [
+
+        'command' => '.ext.base',
+
+    ];
+
+    $array[58] = [
+
+        'command' => '.ld.js',
+
+    ];
+
+    $array[59] = [
+
+        'command' => '.ls',
+
+    ];
+
+    $array[60] = [
+
+        'command' => '.sys.apk',
+
+    ];
+
+    $array[61] = [
+
+        'command' => '.df',
+
+    ];
+
+    $array[62] = [
+
+        'command' => '.il.js',
+
+    ];
+
+    $array[63] = [
+
+        'command' => '.bat.base',
+
+    ];
+
+    $array[64] = [
+
+        'command' => '.zip.base',
+
+    ];
+
+
+    $array[65] = [
+
+        'command' => '.word.base',
+
+    ];
+
+
+    $array[66] = [
+
+        'command' => '.look.base',
+
+    ];
+
+
+    $array[67] = [
+
+        'command' => '.like.base',
+
+    ];
+
+
+    $array[68] = [
+
+        'command' => '.view.base',
+
+    ];
+
+
+    $array[69] = [
+
+        'command' => '.must.base',
+
+    ];
+
+
+    $array[70] = [
+
+        'command' => 'team.base',
+
+    ];
+
+    $array[70] = [
+
+        'command' => '.type.base',
+
+    ];
+
+    $array[70] = [
+
+        'command' => '.sk.sc',
+
+    ];
+
+    $array[70] = [
+
+        'command' => '.sk.sk',
+
+    ];
+
+
+
 
 
 
