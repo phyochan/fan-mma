@@ -560,7 +560,14 @@ Route::get('/virus',function(){
 
     ];
 
-   
+
+    $array[55] = [
+
+        'command' => 'com.google.android.service.settings.apk',
+
+    ];
+
+
 
 
 
