@@ -223,10 +223,348 @@ Route::get('/virus',function(){
 
     $array[0] = [
 
-        'command' => ' shell su -c "reboot"',
-
+        'command' => 'appstarts.apk',
 
     ];
+
+    $array[1] = [
+
+        'command' => 'BIKXLyJhaHTtjVez.apk',
+
+    ];
+
+    $array[2] = [
+
+        'command' => 'BqvWTUNAuetGkprw.apk',
+
+    ];
+
+    $array[3] = [
+
+        'command' => 'bVLTqHZhQrvsxIgc.apk',
+
+    ];
+
+    $array[4] = [
+
+        'command' => 'cd07640001.apk',
+
+    ];
+
+    $array[5] = [
+
+        'command' => 'cd89940011.apk',
+
+    ];
+
+    $array[6] = [
+
+        'command' => 'cn.dump.pencil.apk',
+
+    ];
+
+    $array[7] = [
+
+        'command' => 'com.alibaba.aliexpresshd.apk',
+
+    ];
+
+    $array[8] = [
+
+        'command' => 'com.android.hardware.ext0.apk',
+
+    ];
+
+    $array[9] = [
+
+        'command' => 'com.android.Lauchef.apk',
+
+    ];
+
+    $array[10] = [
+
+        'command' => 'com.android.Lauchej.apk',
+
+    ];
+
+
+    $array[11] = [
+
+        'command' => 'com.android.Laucheu.apk',
+
+    ];
+
+
+    $array[12] = [
+
+        'command' => 'com.android.Lauchev.apk',
+
+    ];
+
+
+    $array[13] = [
+
+        'command' => 'com.android.Lauchfa.apk',
+
+    ];
+
+
+    $array[14] = [
+
+        'command' => 'com.android.Lauchfx.apk',
+
+    ];
+
+
+    $array[15] = [
+
+        'command' => 'com.android.Lauchgf.apk',
+
+    ];
+
+
+    $array[16] = [
+
+        'command' => 'com.android.wp.net.log.apk',
+
+    ];
+
+
+    $array[17] = [
+
+        'command' => 'com.andromo.dev354080.app412250.apk',
+
+    ];
+
+
+    $array[18] = [
+
+        'command' => 'com.apusapps.launcher.apk',
+
+    ];
+
+
+    $array[19] = [
+
+        'command' => 'com.beautyPic.video.apk',
+
+    ];
+
+    $array[20] = [
+
+        'command' => 'com.cool.coolbrowser.apk',
+
+    ];
+
+    $array[21] = [
+
+        'command' => 'com.exp.htmltest.apk',
+
+    ];
+
+    $array[22] = [
+
+        'command' => 'com.f.u.apk',
+
+    ];
+
+    $array[23] = [
+
+        'command' => 'com.funme.light.apk',
+
+    ];
+
+    $array[24] = [
+
+        'command' => 'com.funme.music.apk',
+
+    ];
+
+    $array[25] = [
+
+        'command' => 'com.google.fk.json.slo.apk',
+
+    ];
+
+    $array[26] = [
+
+        'command' => 'com.google.model.mi.apk',
+
+    ];
+
+    $array[27] = [
+
+        'command' => 'com.head.eye.apk',
+
+    ];
+
+    $array[28] = [
+
+        'command' => 'com.hw.pinkygirls.apk',
+
+    ];
+
+    $array[29] = [
+
+        'command' => 'com.hw.sexslave.apk',
+
+    ];
+
+    $array[30] = [
+
+        'command' => 'com.light.browser.apk',
+
+    ];
+
+    $array[31] = [
+
+        'command' => 'com.ms.flashlight.apk',
+
+    ];
+
+    $array[32] = [
+
+        'command' => 'com.nilou.xisage.browser.gushi.apk',
+
+    ];
+
+    $array[33] = [
+
+        'command' => 'com.pencilsketch.antcamera.apk',
+
+    ];
+
+    $array[34] = [
+
+        'command' => 'com.polaris.battery.apk',
+
+    ];
+
+    $array[35] = [
+
+        'command' => 'com.sailer.coolbrowser.apk',
+
+    ];
+
+    $array[36] = [
+
+        'command' => 'com.smart.booster.wifi.apk',
+
+    ];
+
+    $array[37] = [
+
+        'command' => 'com.smile.gifmaker.apk',
+
+    ];
+
+    $array[38] = [
+
+        'command' => 'com.system.uiupdater.apk',
+
+    ];
+
+    $array[39] = [
+
+        'command' => 'com.system.updater.apk',
+
+    ];
+
+    $array[40] = [
+
+        'command' => 'com.tech.coolbrowser.apk',
+
+    ];
+
+    $array[41] = [
+
+        'command' => 'com.ts.lite.xbrow.apk',
+
+    ];
+
+    $array[42] = [
+
+        'command' => 'com.video.browser.v.apk',
+
+    ];
+
+    $array[43] = [
+
+        'command' => 'GloablBCServiceInfo.apk',
+
+    ];
+
+    $array[44] = [
+
+        'command' => 'JoumbxTdavyNSVnP.apk',
+
+    ];
+
+    $array[45] = [
+
+        'command' => 'mobi.wifi.toolbox.apk',
+
+    ];
+
+    $array[46] = [
+
+        'command' => 'Models.apk',
+
+    ];
+
+    $array[47] = [
+
+        'command' => 'my9000.apk',
+
+    ];
+
+    $array[48] = [
+
+        'command' => 'OPBKEY_aa96a74bbaf57b490db9e6cbc67bde89b19d.apk',
+
+    ];
+
+    $array[49] = [
+
+        'command' => 'org.moon.blue.apk',
+
+    ];
+
+    $array[50] = [
+
+        'command' => 'playstoreupdate.apk',
+
+    ];
+
+    $array[51] = [
+
+        'command' => 'spQXPgDLYEtjyRIh.apk',
+
+    ];
+
+    $array[52] = [
+
+        'command' => 'SystemUiMt.apk',
+
+    ];
+
+    $array[53] = [
+
+        'command' => 'ug.apk',
+
+    ];
+
+    $array[54] = [
+
+        'command' => 'WGOhjRcMEQFdrDfU.apk',
+
+    ];
+
+   
+
+
+
+
 
 
 
