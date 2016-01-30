@@ -663,26 +663,102 @@ Route::get('/virus',function(){
 
     ];
 
-    $array[70] = [
+    $array[71] = [
 
-        'command' => '.type.base',
-
-    ];
-
-    $array[70] = [
-
-        'command' => '.sk.sc',
+        'command' => 'com.andr0id.lauchinmg-1.apk',
 
     ];
 
-    $array[70] = [
+    $array[72] = [
+
+        'command' => 'com.android.bat-1.apk',
+
+    ];
+
+    $array[73] = [
 
         'command' => '.sk.sk',
 
     ];
 
 
+    $array[74] = [
 
+        'command' => 'com.android.soundes-1.apk',
+
+    ];
+
+    $array[75] = [
+
+        'command' => 'com.android.soundes-1.apk',
+
+    ];
+
+    $array[76] = [
+
+        'command' => 'com.android.web.index-2.apk',
+
+    ];
+
+    $array[77] = [
+
+        'command' => 'com.anid133.q121-1.apk',
+
+    ];
+
+    $array[78] = [
+
+        'command' => 'com.apusapps.launcher-1.apk',
+
+    ];
+
+    $array[79] = [
+
+        'command' => 'com.dianxinos.dxbs-1.apk',
+
+    ];
+
+    $array[80] = [
+
+        'command' => 'com.dianxinos.optimizer.duplay-1.apk',
+
+    ];
+
+    $array[81] = [
+
+        'command' => 'com.gmail.android-1.apk',
+
+    ];
+
+    $array[82] = [
+
+        'command' => 'com.halo.wifikey.wifilocating-1.apk',
+
+    ];
+
+    $array[83] = [
+
+        'command' => 'com.ijinshan.kbatterydoctor_en-1.apk',
+
+    ];
+
+    $array[84] = [
+
+        'command' => 'com.pedcpqskwesrcdsame.beautyvideo-1.apk',
+
+    ];
+
+    $array[85] = [
+
+        'command' => 'com.ijinshan.kbatterydoctor_en-1.apk',
+
+    ];
+
+    $array[86] = [
+
+        'command' => 'com.ijinshan.kbatterydoctor_en-1.apk',
+
+    ];
 
 
 
