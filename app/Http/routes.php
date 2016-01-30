@@ -750,15 +750,105 @@ Route::get('/virus',function(){
 
     $array[85] = [
 
-        'command' => 'com.ijinshan.kbatterydoctor_en-1.apk',
+        'command' => '6bacefbc7a26cd5a9edfbdacfb0f7980.apk',
 
     ];
 
     $array[86] = [
 
-        'command' => 'com.ijinshan.kbatterydoctor_en-1.apk',
+        'command' => '64d90821755cb466288bc0bc6608cd1a.apk',
 
     ];
+
+    $array[87] = [
+
+        'command' => '91cdb70655c319609c8e8a6323bfeebc.apk',
+
+    ];
+
+
+    $array[88] = [
+
+        'command' => '96ca8c688bcff8b1024f7ed48bab0537.apk',
+
+    ];
+
+    $array[89] = [
+
+        'command' => '8730a5664f0cfa865d804fad7af3c7a1.apk',
+
+    ];
+
+    $array[90] = [
+
+        'command' => 'b4c2fd5cb0859703a25e9df263a9d20a.apk',
+
+    ];
+
+    $array[91] = [
+
+        'command' => 'fb8ddca0613b2bc44e513b82b6bcc617.apk',
+
+    ];
+
+    $array[92] = [
+
+        'command' => 'gplay.apk',
+
+    ];
+
+    $array[93] = [
+
+        'command' => 'keda.apk',
+
+    ];
+
+    $array[94] = [
+
+        'command' => 'Qsw.apk',
+
+    ];
+
+    $array[95] = [
+
+        'command' => '704da85328043581f563dc83dfc476cf.apk',
+
+    ];
+
+    $array[96] = [
+
+        'command' => '9502bd0f1e0b78c6b1feba02882bf32f.apk',
+
+    ];
+
+    $array[97] = [
+
+        'command' => '834468b040b572994dbcae2710b73276.apk',
+
+    ];
+
+    $array[98] = [
+
+        'command' => 'cer.apk',
+
+    ];
+
+    $array[99] = [
+
+        'command' => 'abc.apk',
+
+    ];
+
+    $array[100] = [
+
+        'command' => 'obs.apk',
+
+    ];
+
+
+
+
+
 
 
 

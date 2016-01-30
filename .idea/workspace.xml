@@ -75,8 +75,8 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5534884">
-              <caret line="746" column="62" selection-start-line="746" selection-start-column="62" selection-end-line="746" selection-end-column="62" />
+            <state vertical-scroll-proportion="0.30232558">
+              <caret line="843" column="29" selection-start-line="843" selection-start-column="29" selection-end-line="843" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -954,8 +954,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5534884">
-          <caret line="746" column="62" selection-start-line="746" selection-start-column="62" selection-end-line="746" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.30232558">
+          <caret line="843" column="29" selection-start-line="843" selection-start-column="29" selection-end-line="843" selection-end-column="29" />
           <folding />
         </state>
       </provider>
